@@ -39,7 +39,6 @@ config = {
 
 firebaseconn = firebase.FirebaseApplication(config["databaseURL"],None)
 
-
 for i in all_news_data:
     data = {"newslink":all_news_data[i][0],
             "imagelink":all_news_data[i][1],
@@ -49,9 +48,3 @@ for i in all_news_data:
 
     result = firebaseconn.patch("/News/%s"%i,data)
     print(result)
-
-            
-                            
-         
-        
-    
